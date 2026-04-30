@@ -1,4 +1,3 @@
-// components/Footer.jsx
 import React from "react";
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 
@@ -6,17 +5,26 @@ const Footer = () => {
   return (
     <footer className="bg-slate-950 text-slate-400 mt-16 py-10 border-t border-slate-800">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
-        
         <div className="flex flex-col items-center md:items-start gap-2">
           <p className="font-bold text-xl text-slate-200">MarSHARE Land</p>
-          <p className="text-sm">© 2026 | Made by <span className="text-teal-400">Gaurav Jain</span></p>
+          <p className="text-sm">
+            © 2026 | Made by <span className="text-teal-400">Gaurav Jain</span>
+          </p>
         </div>
 
         <div className="flex gap-6 text-2xl text-slate-500">
-          <a href="#" className="hover:text-teal-400 transition-colors"><FaGithub /></a>
-          <a href="#" className="hover:text-teal-400 transition-colors"><FaLinkedin /></a>
-          <a href="#" className="hover:text-teal-400 transition-colors"><FaInstagram /></a>
-          <a href="#" className="hover:text-teal-400 transition-colors"><FaFacebook /></a>
+          <a href="#" className="hover:text-teal-400 transition-colors">
+            <FaGithub />
+          </a>
+          <a href="#" className="hover:text-teal-400 transition-colors">
+            <FaLinkedin />
+          </a>
+          <a href="#" className="hover:text-teal-400 transition-colors">
+            <FaInstagram />
+          </a>
+          <a href="#" className="hover:text-teal-400 transition-colors">
+            <FaFacebook />
+          </a>
         </div>
 
         <div className="flex flex-col sm:flex-row w-full md:w-auto gap-3">
@@ -31,7 +39,6 @@ const Footer = () => {
             Subscribe
           </button>
         </div>
-
       </div>
     </footer>
   );

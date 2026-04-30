@@ -13,7 +13,6 @@ const ImageUploader = ({ setFile }) => {
     setFile(selectedFile);
     setFileName(selectedFile.name);
 
-    // create preview URL
     setPreview(URL.createObjectURL(selectedFile));
   };
 
@@ -25,7 +24,6 @@ const ImageUploader = ({ setFile }) => {
 
   return (
     <div className="border-2 border-dashed border-slate-700 hover:border-teal-500 bg-slate-900/50 p-10 rounded-xl text-center transition-all group flex flex-col items-center justify-center min-h-[300px] relative">
-
       {fileName && (
         <div className="absolute top-4 left-4 flex items-center gap-2 bg-slate-800 py-1.5 px-3 rounded-full border border-slate-700 shadow-lg z-20 animate-in fade-in slide-in-from-top-2">
           <button
@@ -35,7 +33,9 @@ const ImageUploader = ({ setFile }) => {
           >
             <IoCloseCircle size={20} />
           </button>
-          <span className="text-xs text-slate-300 font-medium truncate max-w-[150px]">{fileName}</span>
+          <span className="text-xs text-slate-300 font-medium truncate max-w-[150px]">
+            {fileName}
+          </span>
         </div>
       )}
 
@@ -55,9 +55,7 @@ const ImageUploader = ({ setFile }) => {
         </svg>
       </div>
 
-      <p className="text-xl font-semibold text-slate-200 mb-2">
-        Upload Image
-      </p>
+      <p className="text-xl font-semibold text-slate-200 mb-2">Upload Image</p>
       <p className="text-slate-500 text-sm mb-6">
         Select an image (JPG, PNG, WEBP)
       </p>
